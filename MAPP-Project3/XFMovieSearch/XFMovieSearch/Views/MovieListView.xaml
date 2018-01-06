@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://xamarin.com/schemas/2014/forms" 
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          x:Class="XFMovieSearch.Views.MovieListView"
+          ItemsSource="{Binding MovieList}"
+          SelectedItem="{Binding SelectedMovie, Mode=TwoWay}"
+          ItemSelected="ListView_ItemSelected"
+          SeparatorVisibility="None"
+          RowHeight="120">
+    <ListView.ItemTemplate>
+        <DataTemplate>
+            <ViewCell Height="120">
+                <StackLayout Orientation="Horizontal">
+                    <Image HorizontalOptions="Center"
+                           VerticalOptions="FillAndExpand"
+                           WidthRequest="80"
+                           Source="{Binding PosterPath}"/>
+                    <StackLayout Margin="0,0,5,0">
+                        <Label Text="{Binding TitleAndYear}"
+                           FontSize="Medium"/>
+                        <Label Text="{Binding Cast}"
+                           FontSize="Small"/>
+                    </StackLayout>
+                </StackLayout>
+            </ViewCell>
+        </DataTemplate>
+    </ListView.ItemTemplate>
+</ListView>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listItem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <ImageView
+            android:id="@+id/poster"
+            android:scaleType="fitXY"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:minWidth="66dp"
+            android:minHeight="99dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout2"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp">
+            <TextView
+                android:id="@+id/title"
+                android:text="Empty Movie Title That Is Way To Long - (XXXX)"
+                android:textSize="22dp"
+                android:paddingTop="5dp"
+                android:gravity="top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="66dp"
+                android:textColor="#ff212121" />
+            <TextView
+                android:id="@+id/actors"
+                android:text="Actors"
+                android:textStyle="italic"
+                android:layout_width="288.0dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

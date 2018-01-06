@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFMovieSearch.Views.MovieDetailPage"
+             Title="Movie Details">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Image Source="{Binding Movie.BackdropPath}"
+                       HorizontalOptions="CenterAndExpand" />
+                <Label Text="{Binding Movie.TitleAndYear}"
+                       FontSize="Large"
+                       Margin="5,0,0,0"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="2"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="{Binding Movie.Runtime}" Grid.Row="0" Grid.Column="0"
+                        Margin="5,0,0,0"/>
+                    <Label Text="|" Grid.Row="0" Grid.Column="1"/>
+                    <Label Text="{Binding Movie.Genres}" Grid.Row="0" Grid.Column="2"
+                        Margin="0,0,5,0"/>
+                </Grid>
+                
+                <BoxView Color="DarkSlateGray" HorizontalOptions="Fill" HeightRequest="1" />
+                <Label Text="{Binding Movie.Tagline}" 
+                       HorizontalTextAlignment="Center"
+                       FontAttributes="Italic"
+                       FontSize="Medium"/>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0" />
+                        <RowDefinition Height="200" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="125" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <Image Source="{Binding Movie.PosterPath}" Grid.Row="1" Grid.Column="0"/>              
+
+                    <ScrollView Grid.Row="1" Grid.Column="1">
+                        <Label Text="{Binding Movie.Overview}"
+                        HorizontalTextAlignment="Start"/>
+                    </ScrollView>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+
+
+
+
+<!--
+
+<Image Source="{Binding Movie.BackdropPath}" x:Name="BackDrop"/>
+                
+                <Label Text="{Binding Movie.TitleAndYear}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+                        ElementName=BackDrop,Property=Y,Factor=1,Constant=220}" />
+                    
+                <Label Text="{Binding Movie.Runtime}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+                        ElementName=BackDrop,Property=Y,Factor=1,Constant=250}" />
+
+                        -->

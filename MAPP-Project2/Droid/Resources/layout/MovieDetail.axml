@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:layout_height="match_parent"
+    p1:id="@+id/linearLayout"
+    p1:layout_width="match_parent">
+    <include
+        p1:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+    <ImageView xmlns:tools="http://schemas.android.com/tools"
+        p1:src="@android:drawable/ic_menu_gallery"
+        p1:layout_width="match_parent"
+        p1:layout_height="160dp"
+        p1:id="@+id/splashImage"
+        p1:scaleType="centerCrop"
+        p1:layout_below="@id/toolbar" />
+    <ImageView xmlns:p3="http://schemas.android.com/tools"
+        p1:src="@android:drawable/ic_menu_gallery"
+        p1:id="@+id/posterImage"
+        p3:visibility="visible"
+        p1:scaleType="fitXY"
+        p1:visibility="visible"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_marginTop="-60dp"
+        p1:layout_below="@id/splashImage"
+        p1:layout_marginLeft="20dp"
+        p1:minWidth="80dp"
+        p1:minHeight="120dp" />
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:id="@+id/linearLayout2"
+        p1:paddingLeft="20dp"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:layout_below="@id/splashImage"
+        p1:layout_toRightOf="@id/posterImage"
+        p1:paddingRight="20dp">
+        <TextView
+            p1:text="Movie Title"
+            p1:textAppearance="?android:attr/textAppearanceLarge"
+            p1:id="@+id/movieTitle"
+            p1:gravity="left"
+            p1:paddingTop="10dp"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content" />
+        <TextView
+            p1:text="Runtime - Genres"
+            p1:id="@+id/genres"
+            p1:paddingBottom="10dp"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        p1:orientation="horizontal"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/linearLayout1"
+        p1:layout_below="@id/linearLayout2">
+        <TextView
+            p1:id="@+id/description"
+            p1:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec neque bibendum, dictum sem vitae, varius dolor. Praesent condimentum erat in quam auctor, et ullamcorper tortor facilisis. Nunc egestas dui tincidunt est rhoncus pellentesque non aliquam dui. Mauris pharetra consectetur sapien id varius. Nunc dolor sem, venenatis quis tincidunt eget, fringilla eu purus. Donec ut justo tincidunt, molestie quam ac, consequat risus. Vestibulum ultrices dolor erat. Phasellus nec felis nec tortor elementum hendrerit et eget metus. Maecenas imperdiet, augue id sagittis fermentum, nisl lectus pulvinar lacus, ac imperdiet orci sapien ut massa. Ut sed sapien in erat placerat viverra sed in mauris. In vitae erat tellus. Nunc ipsum lorem, lacinia id tristique nec, iaculis id massa."
+            p1:requiresFadingEdge="none"
+            p1:layout_width="wrap_content"
+            p1:layout_height="match_parent"
+            p1:paddingRight="20dp"
+            p1:paddingLeft="20dp" />
+    </LinearLayout>
+</RelativeLayout>
